@@ -1,24 +1,31 @@
 import React from "react";
-import GreenImage from "../Components/GreenImage";
+import { useLocation } from "react-router-dom";
+import Charac from "../Components/Charac";
 import ResultCard from "../Components/ResultCard";
 import ActionPrompt from "../Components/ActionPrompt";
+import Screen from "../Components/Screen";
 
 function Failed() {
+  const { state } = useLocation();
+  const { qpiChange = 0, minutesLeft = 0 } = state || {};
+
   const handleRetry = () => {
-    // TODO: Add retry logic
     console.log("Retry clicked");
   };
 
+  const baseQPI = 2.90;
+  const newQPI = (baseQPI + qpiChange).toFixed(2); // qpiChange will be negative
+
   return (
-    <div className="Screen">
-      <GreenImage variant={4} />
+    <Screen>
+      <Charac />
       <div className="Container">
-        {/* Need to fix this since it's the wrong size*/}
         <ResultCard
           title="Failed."
-          message='PooBear <span class="Negative">lost 0.10 QPI points</span> since you failed to commit your remaining of 10 minutes.'
-          qpiInfo="PooBear's New QPI: 2.40"
-          // Need to fix this depending on how much time they failed to commit
+          message={`PooBear <span class="Negative">lost ${Math.abs(
+            qpiChange
+          ).toFixed(2)} QPI points</span> since you failed to commit your remaining ${minutesLeft} minutes.`}
+          qpiInfo={`PooBear's New QPI: ${newQPI}`}
         />
         <ActionPrompt
           promptText="Want to give PooBear another chance?"
@@ -26,7 +33,7 @@ function Failed() {
           onButtonClick={handleRetry}
         />
       </div>
-    </div>
+    </Screen>
   );
 }
 

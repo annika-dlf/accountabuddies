@@ -1,10 +1,11 @@
 import "./App.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import GreenImage from "./Components/GreenImage";
+import Charac from "./Components/Charac";
 import WelcomeHeader from "./Components/WelcomeHeader";
 import TimeSelector from "./Components/TimeSelector";
 import StartButton from "./Components/StartButton";
+import Screen from "./Components/Screen"; 
 
 function App() {
   // State to store the selected time (e.g., 20, 40, or 60)
@@ -22,8 +23,8 @@ function App() {
   };
 
   return (
-    <div className="Screen">
-      <GreenImage variant={1} />
+    <Screen>
+      <Charac />
       <div className="Container">
         <div className="MainWrapper">
           <WelcomeHeader />
@@ -35,7 +36,7 @@ function App() {
         </div>
         <StartButton activeTime={activeTime} onClick={handleStart} />
       </div>
-    </div>
+    </Screen>
   );
 }
 

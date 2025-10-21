@@ -1,24 +1,32 @@
 import React from "react";
-import GreenImage from "../Components/GreenImage";
+import { useLocation } from "react-router-dom";
+import Charac from "../Components/Charac";
 import ResultCard from "../Components/ResultCard";
 import ActionPrompt from "../Components/ActionPrompt";
+import Screen from "../Components/Screen";
 
 function Success() {
+  const { state } = useLocation();
+  const { qpiChange = 0 } = state || {};
+
   const handleShareTips = () => {
-    // TODO: Add share tips logic
     console.log("Share tips clicked");
   };
 
+  // For example: base QPI = 2.90 (you can make this dynamic later)
+  const baseQPI = 2.90;
+  const newQPI = (baseQPI + qpiChange).toFixed(2);
+
   return (
-    <div className="Screen">
-      <GreenImage variant={3} />
+    <Screen>
+      <Charac />
       <div className="Container">
-        {/* Need to fix this since it's the wrong size*/}
         <ResultCard
           title="You did it!"
-          message='PooBear stayed focused and <span class="Positive">gained 0.60 QPI points</span> because of you!'
-          qpiInfo="PooBear's New QPI: 3.50"
-          // Need to fix this to adjust the QPI depending on the time accomplished
+          message={`PooBear stayed focused and <span class="Positive">gained ${qpiChange.toFixed(
+            2
+          )} QPI points</span> because of you!`}
+          qpiInfo={`PooBear's New QPI: ${newQPI}`}
         />
         <ActionPrompt
           promptText="Want to share some tips for others to help PooBear?"
@@ -27,7 +35,7 @@ function Success() {
           showSkip={true}
         />
       </div>
-    </div>
+    </Screen>
   );
 }
 
