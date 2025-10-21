@@ -11,7 +11,6 @@ function ActionPrompt({ promptText, buttonText, onButtonClick, showSkip = false 
           <h2>{buttonText}</h2>
         </div>
       </div>
-      {showSkip && <p className="Skip">Skip this step</p>}
     </>
   );
 }

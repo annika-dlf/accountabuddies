@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Charac from "../Components/Charac";
 import ResultCard from "../Components/ResultCard";
@@ -9,12 +9,19 @@ function Success() {
   const { state } = useLocation();
   const { qpiChange = 0 } = state || {};
 
-  const handleShareTips = () => {
-    console.log("Share tips clicked");
+  // Clear timer progress (user succeeded)
+  useEffect(() => {
+    localStorage.removeItem("remainingTime");
+    localStorage.removeItem("activeTime");
+  }, []);
+
+const handleShareTips = () => {
+  window.open(
+    "https://padlet.com/annikadelafuente/accountabuddies-study-tips-j3kbg62y3ne7at65"
+  )
   };
 
-  // For example: base QPI = 2.90 (you can make this dynamic later)
-  const baseQPI = 2.90;
+  const baseQPI = 2.9;
   const newQPI = (baseQPI + qpiChange).toFixed(2);
 
   return (
@@ -32,7 +39,6 @@ function Success() {
           promptText="Want to share some tips for others to help PooBear?"
           buttonText="Let's do it!"
           onButtonClick={handleShareTips}
-          showSkip={true}
         />
       </div>
     </Screen>

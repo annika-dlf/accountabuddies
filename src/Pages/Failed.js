@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Charac from "../Components/Charac";
 import ResultCard from "../Components/ResultCard";
 import ActionPrompt from "../Components/ActionPrompt";
@@ -7,14 +7,30 @@ import Screen from "../Components/Screen";
 
 function Failed() {
   const { state } = useLocation();
+  const navigate = useNavigate();
+
   const { qpiChange = 0, minutesLeft = 0 } = state || {};
 
   const handleRetry = () => {
-    console.log("Retry clicked");
+    // Retrieve saved time from localStorage
+    const remainingTime = localStorage.getItem("remainingTime");
+    const activeTime = localStorage.getItem("activeTime");
+
+    if (remainingTime && activeTime) {
+      navigate("/timer", {
+        state: {
+          activeTime: Number(activeTime),
+          resumeTime: Number(remainingTime), // resume from where they left off
+        },
+      });
+    } else {
+      // fallback (no saved state)
+      navigate("/timer", { state: { activeTime: 20 } }); // default 20 min
+    }
   };
 
   const baseQPI = 2.90;
-  const newQPI = (baseQPI + qpiChange).toFixed(2); // qpiChange will be negative
+  const newQPI = (baseQPI + qpiChange).toFixed(2);
 
   return (
     <Screen>
@@ -38,3 +54,4 @@ function Failed() {
 }
 
 export default Failed;
+
