@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
 
 .Desktop {
   display: flex;
@@ -27,7 +27,6 @@
   gap: 20px;
   width: 100%;
   align-self: stretch;
-
 }
 
 /* IN PLACE COMPONENT */
@@ -68,7 +67,6 @@
   object-fit: contain;
 }
 
-
 /* TEXT STYLES */
 .Title {
   font-family: Parkinsans;
@@ -80,38 +78,37 @@
 }
 
 .small {
-    color: #000;
-    font-family: Parkinsans;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 110%; /* 35.2px */
+  color: #000;
+  font-family: Parkinsans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 35.2px */
 }
 
 .rank-text {
-    font-family: Parkinsans;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
+  font-family: Parkinsans;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
 }
 
 .Student h3 {
-    font-family: Parkinsans;
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 90%;
+  font-family: Parkinsans;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%;
 }
 
 .Student p {
-    font-family: Parkinsans;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  font-family: Parkinsans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
-
 
 .qpi {
   font-size: 64px;
@@ -125,7 +122,7 @@
 }
 
 .Place.leader .place-details {
-  padding: 40px 60px; 
+  padding: 40px 60px;
 }
 
 .Place.leader h2 {
@@ -146,5 +143,17 @@
 
 /* Adjust the Charac height */
 .Place.leader .charac_leaderboard-green {
+  height: 206px;
+}
+
+.Place.leader .charac_leaderboard-pink {
+  height: 206px;
+}
+
+.Place.leader .charac_leaderboard-yellow {
+  height: 206px;
+}
+
+.Place.leader .charac_leaderboard-blue {
   height: 206px;
 }
