@@ -230,11 +230,65 @@ small {
   margin: -28px;
 }
 
+.charac_app-blue {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_app-blue.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_app-pink {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_app-pink.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_app-yellow {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_app-yellow.png);
+  background-size: cover;
+  margin: -28px;
+}
+
 .charac_timer-green {
   width: 305px;
   height: 295px;
   aspect-ratio: 61/59;
   background-image: url(../public/charac_timer-green.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_timer-blue {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_timer-blue.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_timer-pink {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_timer-pink.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_timer-yellow {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_timer-yellow.png);
   background-size: cover;
   margin: -28px;
 }
@@ -248,11 +302,97 @@ small {
   margin: -28px;
 }
 
+.charac_success-blue {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_success-blue.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_success-pink {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_success-pink.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_success-yellow {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_success-yellow.png);
+  background-size: cover;
+  margin: -28px;
+}
+
 .charac_failed-green {
   width: 305px;
   height: 295px;
   aspect-ratio: 61/59;
   background-image: url(../public/charac_failed-green.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_failed-blue {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_failed-blue.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_failed-pink {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_failed-pink.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_failed-yellow {
+  width: 305px;
+  height: 295px;
+  aspect-ratio: 61/59;
+  background-image: url(../public/charac_failed-yellow.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_leaderboard-green {
+  height: 141px;
+  aspect-ratio: 1/1;
+  background-image: url(../public/charac_leaderboard-green.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_leaderboard-blue {
+  height: 141px;
+  aspect-ratio: 1/1;
+  background-image: url(../public/charac_leaderboard-blue.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_leaderboard-pink {
+  height: 141px;
+  aspect-ratio: 1/1;
+  background-image: url(../public/charac_leaderboard-pink.png);
+  background-size: cover;
+  margin: -28px;
+}
+
+.charac_leaderboard-yellow {
+  height: 141px;
+  aspect-ratio: 1/1;
+  background-image: url(../public/charac_leaderboard-yellow.png);
   background-size: cover;
   margin: -28px;
 }

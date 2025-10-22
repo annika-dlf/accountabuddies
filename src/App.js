@@ -1,17 +1,15 @@
 import "./App.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Charac from "./Components/Charac";
 import WelcomeHeader from "./Components/WelcomeHeader";
 import TimeSelector from "./Components/TimeSelector";
 import StartButton from "./Components/StartButton";
-import Screen from "./Components/Screen"; 
+import Screen from "./Components/Screen";
 
 function App() {
-  // State to store the selected time (e.g., 20, 40, or 60)
   const [activeTime, setActiveTime] = useState(null);
   const navigate = useNavigate();
-
   const times = [20, 40, 60];
 
   const handleStart = () => {
@@ -36,6 +34,11 @@ function App() {
         </div>
         <StartButton activeTime={activeTime} onClick={handleStart} />
       </div>
+
+      {/* ✅ Leaderboard button for testing */}
+      <Link to="/leaderboard">
+        <button className="leaderboard-btn">Go to Leaderboard</button>
+      </Link>
     </Screen>
   );
 }

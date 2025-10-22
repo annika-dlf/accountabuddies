@@ -1,46 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
 .Desktop {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  justify-content: center;
   align-items: center;
-  padding: 64px;
-  width: 100%;
-  min-height: 100vh;
+  padding: 64px 128px;
+  width: 80vw;
+  min-height: 80vh;
   background: #fffaf0;
 }
 
-.Container {
+.Container-dt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 0px;
   width: 100%;
-}
-
-.Title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #4b2501;
-  margin-top: 4px;
-}
-
-.Leaderboard {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  gap: 16px;
-  margin-top: 32px;
-}
-
-/* Label row */
-.Leaderboard_Label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-weight: 700;
-  color: #6b3e1d;
-  font-size: 1rem;
-  padding: 0 60px;
+  height: auto;
 }
 
 .Container_Place {
@@ -48,4 +26,125 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  align-self: stretch;
+
+}
+
+/* IN PLACE COMPONENT */
+.Place {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  height: 141px;
+  color: #fff;
+}
+
+.Rank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+}
+
+.place-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 0 60px;
+}
+
+.Student {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+
+/* TEXT STYLES */
+.Title {
+  font-family: Parkinsans;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%; /* 70.4px */
+  text-transform: uppercase;
+}
+
+.small {
+    color: #000;
+    font-family: Parkinsans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 35.2px */
+}
+
+.rank-text {
+    font-family: Parkinsans;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.Student h3 {
+    font-family: Parkinsans;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%;
+}
+
+.Student p {
+    font-family: Parkinsans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.qpi {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+/* LEADER ONLY */
+
+.Place.leader {
+  height: 206px;
+}
+
+.Place.leader .place-details {
+  padding: 40px 60px; 
+}
+
+.Place.leader h2 {
+  font-size: 72px;
+}
+
+.Place.leader h3 {
+  font-size: 60px;
+}
+
+.Place.leader p {
+  font-size: 36px;
+}
+
+.Place.leader h1 {
+  font-size: 92px;
+}
+
+/* Adjust the Charac height */
+.Place.leader .charac_leaderboard-green {
+  height: 206px;
 }
