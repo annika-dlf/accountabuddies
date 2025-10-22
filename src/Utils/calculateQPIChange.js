@@ -3,10 +3,13 @@ export const calculateQPIChange = (totalSeconds, remainingSeconds) => {
   const remainingMinutes = remainingSeconds / 60;
   const completedMinutes = totalMinutes - remainingMinutes;
 
-  // +0.1 for every minute done, -0.1 for every minute missed
-  const gain = completedMinutes * 0.1;
-  const loss = remainingMinutes * 0.1;
+  // +0.1 for every 10 minutes done, -0.1 for every 10 minutes missed
+  const gain = completedMinutes * 0.01;
+  const loss = remainingMinutes * 0.01;
   const netChange = gain - loss;
 
-  return parseFloat(netChange.toFixed(2));
+  // Always round DOWN to two decimal places
+  const roundedDown = Math.floor(netChange * 100) / 100;
+
+  return roundedDown;
 };

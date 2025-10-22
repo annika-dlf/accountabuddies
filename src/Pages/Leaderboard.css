@@ -1,0 +1,51 @@
+.Desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px;
+  width: 100%;
+  min-height: 100vh;
+  background: #fffaf0;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.Title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #4b2501;
+  margin-top: 4px;
+}
+
+.Leaderboard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Label row */
+.Leaderboard_Label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: 700;
+  color: #6b3e1d;
+  font-size: 1rem;
+  padding: 0 60px;
+}
+
+.Container_Place {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}

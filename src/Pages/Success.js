@@ -21,8 +21,8 @@ const handleShareTips = () => {
   )
   };
 
-  const baseQPI = 2.9;
-  const newQPI = (baseQPI + qpiChange).toFixed(2);
+  const baseQPI = 4.00;
+  const newQPI = Math.min(baseQPI + qpiChange, 4.0).toFixed(2);
 
   return (
     <Screen>
