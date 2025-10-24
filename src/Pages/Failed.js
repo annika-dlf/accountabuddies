@@ -40,15 +40,15 @@ function Failed() {
         title={qpiChange === 0 ? "Failed." : "Failed."}
         message={
           qpiChange === 0
-            ? `PooBear <span class="Neutral">didn't get any QPI points</span> because you didn't even get through half of what you committed!`
-            : `PooBear <span class="Negative">lost ${Math.abs(qpiChange).toFixed(
+            ? `Bilbo <span class="Neutral">didn't get any QPI points</span> because you didn't even get through half of what you committed!`
+            : `Bilbo <span class="Negative">lost ${Math.abs(qpiChange).toFixed(
                 2
               )} QPI points</span> since you failed to commit your remaining ${minutesLeft} minutes.`
         }
-        qpiInfo={`PooBear's New QPI: ${newQPI}`}
+        qpiInfo={`Bilbo's New QPI: ${newQPI}`}
         />
       <ActionPrompt
-          promptText="Want to give PooBear another chance?"
+          promptText="Want to give Bilbo another chance?"
           buttonText="Let's do it!"
           onButtonClick={handleRetry}
         />

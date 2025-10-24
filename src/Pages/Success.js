@@ -30,13 +30,13 @@ const handleShareTips = () => {
       <div className="Container">
         <ResultCard
           title="You did it!"
-          message={`PooBear stayed focused and <span class="Positive">gained ${qpiChange.toFixed(
+          message={`Bilbo stayed focused and <span class="Positive">gained ${qpiChange.toFixed(
             2
           )} QPI points</span> because of you!`}
-          qpiInfo={`PooBear's New QPI: ${newQPI}`}
+          qpiInfo={`Bilbo's New QPI: ${newQPI}`}
         />
         <ActionPrompt
-          promptText="Want to share some tips for others to help PooBear?"
+          promptText="Want to share some tips for others to help Bilbo?"
           buttonText="Let's do it!"
           onButtonClick={handleShareTips}
         />

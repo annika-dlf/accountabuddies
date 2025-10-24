@@ -14,7 +14,7 @@ function TimerDisplay({ formattedTime }) {
       </div>
       <small className="Description">
         If you leave now, the time you fail to commit will be{" "}
-        <span className="Negative">deducted</span> from Cat's QPI (10 mins =
+        <span className="Negative">deducted</span> from Bilbo's QPI (10 mins =
         0.10 deducted).
       </small>
     </div>
