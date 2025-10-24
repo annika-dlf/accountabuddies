@@ -34,11 +34,6 @@ function App() {
         </div>
         <StartButton activeTime={activeTime} onClick={handleStart} />
       </div>
-
-      {/* ✅ Leaderboard button for testing */}
-      <Link to="/leaderboard">
-        <button className="leaderboard-btn">Go to Leaderboard</button>
-      </Link>
     </Screen>
   );
 }

@@ -1,24 +1,19 @@
-// Charac.js
 import React from "react";
 import { useLocation } from "react-router-dom";
 
 function Charac({ overrideClass }) {
   const location = useLocation();
 
-  // Default behavior — detect class from current page
-  let pageName = location.pathname
-    .toLowerCase()
-    .replaceAll("/", "");
+  // Normalize and split path into parts
+  const path = location.pathname.toLowerCase().replaceAll("/", "");
 
-  if (!pageName) pageName = "app";
+  // Default to "app-green" if path is empty
+  const base = path || "app-green";
 
-  const defaultClass = `charac_${pageName}-green`;
-
-  // ✅ Use override if provided, otherwise default
-  const className = overrideClass || defaultClass;
+  // If override provided, use it; else generate `charac_{base}`
+  const className = overrideClass || `charac_${base}`;
 
   return <div className={className}></div>;
 }
 
 export default Charac;
-
