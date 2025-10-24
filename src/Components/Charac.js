@@ -7,8 +7,8 @@ function Charac({ overrideClass }) {
   // Normalize and split path into parts
   const path = location.pathname.toLowerCase().replaceAll("/", "");
 
-  // Default to "app-green" if path is empty
-  const base = path || "app-green";
+  // Default to "app" if path is empty
+  const base = path || "app";
 
   // If override provided, use it; else generate `charac_{base}`
   const className = overrideClass || `charac_${base}`;
