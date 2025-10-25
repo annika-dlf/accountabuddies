@@ -82,4 +82,3 @@ function SlideToExit({ onSlideComplete }) {
 }
 
 export default SlideToExit;
-

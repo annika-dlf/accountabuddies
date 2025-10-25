@@ -1,6 +1,6 @@
 /* TEXT STYLES */
 
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
 
 h1 {
   font-family: Parkinsans;
@@ -52,17 +52,17 @@ small {
 }
 
 .Description {
-  color: #8B8B8B;
+  color: #8b8b8b;
   text-align: right;
   width: 100%;
 }
 
 .Negative {
-  color: #B72727;
+  color: #b72727;
 }
 
 .Positive {
-  color: #7DB727;
+  color: #7db727;
 }
 
 /* SCREEN DIV CLASSES */
@@ -112,7 +112,7 @@ small {
   align-items: center;
   align-self: stretch;
   border-radius: 20px;
-  background: #FFF;
+  background: #fff;
 }
 
 .MainWrapper--noheight {
@@ -161,7 +161,7 @@ small {
   align-self: stretch;
   flex: 1 0 0;
   border-radius: 8px;
-  background: #EEE;
+  background: #eee;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -172,11 +172,11 @@ small {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  background: #56630C;
+  background: #56630c;
 }
 
 .Button h2 {
-  color: #FFF;
+  color: #fff;
   text-align: center;
 }
 
@@ -221,7 +221,7 @@ small {
 /* INTERACTIONS */
 
 .TimerBox.active {
-  background: #A2B72A;
+  background: #a2b72a;
   color: #fff;
 }
 
