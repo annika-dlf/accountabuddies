@@ -52,7 +52,34 @@ function Failed() {
     updateBilboQPI();
   }, [qpiChange]);
 
-  const handleRetry = () => {
+  const handleRetry = async () => {
+    try {
+      // Restore the lost QPI points before retrying
+      const { data, error } = await supabase
+        .from("users")
+        .select("qpi")
+        .eq("name", "Bilbo")
+        .single();
+
+      if (!error && data) {
+        // Add back the lost points (qpiChange is negative, so subtract it)
+        const restoredQPI = Math.min(data.qpi - qpiChange, 4.0); // Cap at 4.0
+
+        const { error: updateError } = await supabase
+          .from("users")
+          .update({ qpi: restoredQPI })
+          .eq("name", "Bilbo");
+
+        if (!updateError) {
+          console.log(
+            `Bilbo's QPI restored from ${data.qpi} to ${restoredQPI}`
+          );
+        }
+      }
+    } catch (err) {
+      console.error("Error restoring QPI:", err);
+    }
+
     // Retrieve saved time from localStorage
     const remainingTime = localStorage.getItem("remainingTime");
     const activeTime = localStorage.getItem("activeTime");
